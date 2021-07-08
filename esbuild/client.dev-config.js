@@ -1,6 +1,9 @@
 const { build } = require("esbuild")
 const chokidar = require("chokidar")
 const servor = require('servor');
+const postCss = require('esbuild-plugin-postcss2').default
+const autoprefixer = require('autoprefixer')
+const tailwindcss = require('tailwindcss')
 
 ;(async () => {
 	// `esbuild` bundler for JavaScript / TypeScript.
@@ -21,6 +24,11 @@ const servor = require('servor');
 		minify: process.env.NODE_ENV === "production",
 		// Bundles JavaScript to (see `entryPoints`).
 		outdir: "./build/static/",
+		plugins: [
+			postCss({
+			  plugins: [autoprefixer, tailwindcss],
+			}),
+		]
 	})
 	// `chokidar` watcher source changes.
 	chokidar
