@@ -1,0 +1,59 @@
+{
+  "name": "typescript-react-express-esbuild",
+  "version": "0.0.1",
+  "description": "React app with express, typescript and esbuild",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ./esbuild/client.build-config.js",
+    "dev:client": "node ./esbuild/client.dev-config.js"
+  },
+  "keywords": [
+    "react",
+    "express",
+    "typescript",
+    "esbuild"
+  ],
+  "author": "Lukasz Celitan",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "esbuild": "^0.12.15",
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^12.0.0",
+    "@types/jest": "^26.0.24",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
+    "@web/dev-server-esbuild": "^0.2.12",
+    "autoprefixer": "^10.2.6",
+    "chokidar": "^3.5.2",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "fs-extra": "^10.0.0",
+    "husky": "^7.0.1",
+    "jest": "^27.0.6",
+    "lint-staged": "^11.0.0",
+    "postcss": "^8.3.5",
+    "prettier": "^2.3.2",
+    "servor": "^4.0.2",
+    "tailwindcss": "^2.2.4",
+    "typescript": "^4.3.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,css}": [
+      "./node_modules/.bin/eslint --fix --ext .ts,.tsx"
+    ]
+  }
+}
