@@ -1,6 +1,4 @@
 const { build } = require('esbuild');
-
-const chokidar = require('chokidar');
 const fs = require('fs-extra');
 
 const generateBuild = async () => {
