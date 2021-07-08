@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "esnext",
+      "lib": ["dom", "es5","es6", "es7", "scripthost", "es2015"],
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "allowSyntheticDefaultImports": true,
+      "experimentalDecorators": true,
+      "sourceMap": true,
+      "downlevelIteration": true,
+      "strictNullChecks": true,
+      "noImplicitAny": false,
+      "removeComments": true,
+      "isolatedModules": true,
+      "jsx": "react",
+      "baseUrl": "./",
+      "paths": {
+        "@components": ["src/client/components/index.ts"],
+        "@components/*": ["src/client/components/*"],
+      }
+    },
+    "exclude": ["node_modules"]
+  }
+  
