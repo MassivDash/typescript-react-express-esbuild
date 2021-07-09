@@ -1,13 +1,12 @@
 import { render } from '@testing-library/react';
 import React from 'react';
-import Header, { HeaderProps } from './Header';
+import Header from './Header';
 
 describe('Header', () => {
-    const defaultProps: HeaderProps = {};
+
 
     it('should render', () => {
-        const props = { ...defaultProps };
-        const { asFragment, queryByText } = render(<Header {...props} />);
+        const { asFragment, queryByText } = render(<Header />);
 
         expect(asFragment()).toMatchSnapshot();
         expect(queryByText('Header')).toBeTruthy();

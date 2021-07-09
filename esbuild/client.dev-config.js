@@ -11,7 +11,6 @@ const tailwindcss = require('tailwindcss')
 		// Bundles JavaScript.
 		bundle: true,
         sourcemap: true,
-        target: ['chrome58', 'firefox57', 'edge16'],
         loader: { ".svg": "dataurl", ".png": "dataurl" },
 		// Defines env variables for bundled JavaScript; here `process.env.NODE_ENV`
 		// is propagated with a fallback.

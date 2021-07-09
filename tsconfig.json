@@ -18,6 +18,8 @@
       "paths": {
         "@components": ["src/client/components/index.ts"],
         "@components/*": ["src/client/components/*"],
+        "@pages": ["src/client/pages/index.ts"],
+        "@pages/*": ["src/client/pages/*"],
       }
     },
     "exclude": ["node_modules"]

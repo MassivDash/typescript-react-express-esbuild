@@ -1,9 +1,12 @@
 import React from 'react';
+import { Navbar } from '@components';
 
-export interface HeaderProps {}
-
-const Header: React.FunctionComponent<HeaderProps> = ({ }) => {
-    return <>Header</>;
+const Header: React.FunctionComponent = () => {
+  return (
+    <header>
+      <Navbar />
+    </header>
+  );
 };
 
 export default Header;
