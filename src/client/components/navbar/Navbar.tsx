@@ -5,6 +5,7 @@ const Navbar: React.FunctionComponent = () => {
   const items = [
     { text: 'Home', path: '/' },
     { text: 'About', path: '/about' },
+    { text: 'Data', path: '/data' },
   ];
 
   return (
