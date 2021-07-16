@@ -31,7 +31,7 @@ includes
 npm install
 ```
 
-## Development
+## Development (Port: 8000)
 
 ```sh
 npm run start
