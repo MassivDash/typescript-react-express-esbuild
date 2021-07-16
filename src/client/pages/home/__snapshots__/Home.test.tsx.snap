@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should render 1`] = `
+<DocumentFragment>
+  <main
+    class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
+  >
+    <h1
+      class="text-center text-2xl text-indigo-900 w-full h-64"
+    >
+      Esbuild only setup
+    </h1>
+    <h2
+      class="text-center text-lg w-full h-44"
+    >
+      This boilerplate is experimental typescript, react, node.js (express) setup, completly dropping webpack family in favor of new Esbuild package. Project uses tailwindcss as the main css framework
+    </h2>
+  </main>
+</DocumentFragment>
+`;

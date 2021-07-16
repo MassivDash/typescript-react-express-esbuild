@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 export interface NavItemProps {
@@ -8,7 +8,7 @@ export interface NavItemProps {
   };
 }
 
-const NavItem: React.FunctionComponent<NavItemProps> = ({ item }) => {
+const NavItem: FC<NavItemProps> = ({ item }) => {
   const location = useLocation();
   const isActive = location.pathname === item.path;
   return (

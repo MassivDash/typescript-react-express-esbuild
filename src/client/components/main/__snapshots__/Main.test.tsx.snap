@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main should render 1`] = `
+<DocumentFragment>
+  <main
+    class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
+  >
+    <p>
+      Spaceghost
+    </p>
+  </main>
+</DocumentFragment>
+`;

@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "description": "React app with express, typescript and esbuild",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node ./esbuild/client.build-config.js",
     "dev:client": "node ./esbuild/client.dev-config.js",
     "dev:server": "node ./esbuild/server.dev-config.js",
     "dev:server-watch": "nodemon ./build/index.js --ignore src/client/ --ignore build/public/",
-    "start": "npm-run-all --parallel dev:*"
+    "start": "npm-run-all --parallel dev:*",
+    "test": "jest --bail --testTimeout=200000 --detectOpenHandles --collectCoverage"
   },
   "keywords": [
     "react",
@@ -21,7 +21,6 @@
   "dependencies": {
     "axios": "^0.21.1",
     "cors": "^2.8.5",
-    "esbuild": "^0.12.15",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
     "react": "^17.0.2",
@@ -33,11 +32,12 @@
     "@types/jest": "^26.0.24",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",
-    "@web/dev-server-esbuild": "^0.2.12",
     "autoprefixer": "^10.2.6",
     "chokidar": "^3.5.2",
     "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
+    "esbuild": "^0.12.15",
+    "esbuild-jest": "^0.5.0",
     "esbuild-plugin-postcss2": "^0.0.9",
     "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.3.0",
@@ -57,7 +57,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && test"
     }
   },
   "lint-staged": {

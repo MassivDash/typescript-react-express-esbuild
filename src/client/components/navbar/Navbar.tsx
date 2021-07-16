@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { FC } from 'react';
 import NavItem from './navItem';
 
-const Navbar: React.FunctionComponent = () => {
-  const items = [
-    { text: 'Home', path: '/' },
-    { text: 'About', path: '/about' },
-    { text: 'Data', path: '/data' },
-  ];
+const items = [
+  { text: 'Home', path: '/' },
+  { text: 'About', path: '/about' },
+  { text: 'Data', path: '/data' },
+];
 
+const Navbar: FC = () => {
   return (
     <nav className="bg-gray-800 w-full h-14 flex justify-start items-center p-2">
       <div className="ml-3 bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">

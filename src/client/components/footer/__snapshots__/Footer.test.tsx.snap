@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should render 1`] = `
+<DocumentFragment>
+  <footer
+    class="bg-gray-200 grid grid-cols-1 lg:grid-cols-5 gap-2"
+  >
+    <div
+      class="m-3"
+    >
+      <p>
+        Build and designed with ❤ by Spaceout.pl
+      </p>
+      <p>
+        Made with React framework
+      </p>
+      <p>
+        Source code at github
+      </p>
+    </div>
+  </footer>
+</DocumentFragment>
+`;

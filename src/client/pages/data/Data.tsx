@@ -8,10 +8,14 @@ const Data: React.FunctionComponent<unknown> = () => {
 
   useEffect(() => {
     async function getData() {
-      const data = await axiosInstance.get('data');
-      setIsLoading(false);
-      setData(data.data.testApi.data1);
-      // eslint-disable-next-line no-console
+      try {
+        const data = await axiosInstance.get('data');
+        setIsLoading(false);
+        setData(data.data.testApi.data1);
+        // eslint-disable-next-line no-console
+      } catch (e) {
+        console.error(e);
+      }
     }
     getData();
   }, []);

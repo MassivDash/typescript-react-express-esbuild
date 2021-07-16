@@ -64,7 +64,7 @@ const tailwindcss = require('tailwindcss');
     });
   await servor({
     root: './build/public/',
-    static: true,
+    static: false,
     fallback: 'index.html',
     reload: true,
     port: 8000,

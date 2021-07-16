@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render 1`] = `
+<DocumentFragment>
+  <header>
+    <nav
+      class="bg-gray-800 w-full h-14 flex justify-start items-center p-2"
+    >
+      <div
+        class="ml-3 bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+      >
+        <img
+          alt="Spaceghost"
+          class="h-8 w-8 rounded-full"
+          src="https://blog.spaceout.pl/content/images/2020/03/spaceghost-1.jpg"
+        />
+      </div>
+      <ul
+        class="flex ml-2  w-56 justify-evenly"
+      >
+        <li
+          class="text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white bg-gray-900"
+        >
+          <a
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          class="text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white false"
+        >
+          <a
+            href="/about"
+          >
+            About
+          </a>
+        </li>
+        <li
+          class="text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white false"
+        >
+          <a
+            href="/data"
+          >
+            Data
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main
+    class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
+  >
+    <h1
+      class="text-center text-2xl text-indigo-900 w-full h-64"
+    >
+      Esbuild only setup
+    </h1>
+    <h2
+      class="text-center text-lg w-full h-44"
+    >
+      This boilerplate is experimental typescript, react, node.js (express) setup, completly dropping webpack family in favor of new Esbuild package. Project uses tailwindcss as the main css framework
+    </h2>
+  </main>
+  <footer
+    class="bg-gray-200 grid grid-cols-1 lg:grid-cols-5 gap-2"
+  >
+    <div
+      class="m-3"
+    >
+      <p>
+        Build and designed with ❤ by Spaceout.pl
+      </p>
+      <p>
+        Made with React framework
+      </p>
+      <p>
+        Source code at github
+      </p>
+    </div>
+  </footer>
+</DocumentFragment>
+`;

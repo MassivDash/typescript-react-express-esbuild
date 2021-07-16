@@ -3,10 +3,10 @@ import React from 'react';
 import Footer from './Footer';
 
 describe('Footer', () => {
-    it('should render', () => {
-        const { asFragment, queryByText } = render(<Footer />);
+  it('should render', () => {
+    const { asFragment, queryByText } = render(<Footer />);
 
-        expect(asFragment()).toMatchSnapshot();
-        expect(queryByText('Footer')).toBeTruthy();
-    });
+    expect(asFragment()).toMatchSnapshot();
+    expect(queryByText('Made with React framework')).toBeTruthy();
+  });
 });
