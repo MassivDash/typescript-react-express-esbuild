@@ -33,6 +33,8 @@ const generateBuild = async () => {
       }),
     ],
   }).catch(() => process.exit(1));
+
+  process.exit(0);
 };
 
 generateBuild();

@@ -30,13 +30,13 @@ const init = async (): Promise<void> => {
 
   app.use(
     helmet({
-      contentSecurityPolicy: false,
+      contentSecurityPolicy: true,
     }),
   );
   app.use(cors(getCorsOptions()));
   app.use(express.json());
 
-  //Serve Static files
+  //Serve Static files including the react app static bundle
 
   app.use(
     BASE_URL,
