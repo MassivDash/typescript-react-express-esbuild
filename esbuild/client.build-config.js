@@ -34,6 +34,11 @@ const generateBuild = async () => {
     ],
   }).catch(() => process.exit(1));
 
+    // Copy over the html template.
+    fs.copyFile('./src/client/indexTemplate.html', './build/public/index.html', (err) => {
+      if (err) throw err;
+    });
+
   process.exit(0);
 };
 

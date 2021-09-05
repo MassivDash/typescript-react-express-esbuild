@@ -4,8 +4,10 @@ const servor = require('servor');
 const postCss = require('esbuild-plugin-postcss2').default;
 const autoprefixer = require('autoprefixer');
 const tailwindcss = require('tailwindcss');
-
+const fs = require('fs');
 (async () => {
+
+
   // `esbuild` bundler for JavaScript / TypeScript.
   const builder = await build({
     // Bundles JavaScript.
@@ -62,6 +64,13 @@ const tailwindcss = require('tailwindcss');
       console.log(`Directory ${path} has been removed to client app`);
       builder.rebuild();
     });
+
+  // Copy over the html template.
+  fs.copyFile('./src/client/indexTemplate.html', './build/public/index.html', (err) => {
+      if (err) throw err;
+    });
+
+  // Start the server.
   await servor({
     root: './build/public/',
     static: false,
@@ -69,4 +78,6 @@ const tailwindcss = require('tailwindcss');
     reload: true,
     port: 8000,
   });
+
+  console.info(['Servor hot refresh at http://localhost:8000']);
 })();
