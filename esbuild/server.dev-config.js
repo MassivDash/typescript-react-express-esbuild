@@ -29,7 +29,7 @@ const chokidar = require('chokidar');
   // `chokidar` watcher source changes.
   chokidar
     // Watches TypeScript
-    .watch('./src/server/**/*.ts}', {
+    .watch('./src/server/**/*.ts', {
       awaitWriteFinish: {
         stabilityThreshold: 2000,
         pollInterval: 100,
